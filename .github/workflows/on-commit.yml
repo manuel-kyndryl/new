@@ -1,0 +1,17 @@
+name: Acción de ejemplo
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  ejemplo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+      - name: Mostrar mensaje
+        run: echo "Commit detectado en la rama ${{ github.ref_name }}"
+      - name: Mostrar hash del commit
+        run: echo "Commit ${{ github.sha }}"
