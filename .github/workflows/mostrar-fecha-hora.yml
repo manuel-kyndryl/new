@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  1er-JOB:
+  mostrar-fecha-hora:
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar la fecha del día
