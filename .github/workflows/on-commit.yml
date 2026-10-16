@@ -1,17 +1,18 @@
-name: Acción de ejemplo
+name: Action de Ejemplo
 
 on:
   push:
     branches:
       - '**'
+  workflow_dispatch:
 
 jobs:
-  ejemplo:
+  1er-JOB:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v4
-      - name: Mostrar mensaje
-        run: echo "Commit detectado en la rama ${{ github.ref_name }}"
-      - name: Mostrar hash del commit
-        run: echo "Commit ${{ github.sha }}"
+      - name: Mostrar la fecha del día
+        run: date
+      - name: Mostrar la hora actual
+        run: date +"%H:%M:%S"
+      - name: Mostrar mensaje de confirmación
+        run: echo "El workflow se ejecutó correctamente"
