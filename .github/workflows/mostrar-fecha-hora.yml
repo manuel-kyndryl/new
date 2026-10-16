@@ -1,4 +1,4 @@
-name: Action de Ejemplo
+name: Mostrar fecha y hora
 
 on:
   push:
