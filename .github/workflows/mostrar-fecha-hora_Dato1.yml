@@ -14,5 +14,19 @@ jobs:
         run: date
       - name: Mostrar la hora actual
         run: date +"%H:%M:%S"
+      - name: Calcular día juliano
+        id: julian_day
+        shell: bash
+        run: |
+          echo "Día juliano del año: $(date +%j)"
+          JD=$(python - <<'PY'
+          import datetime
+          now = datetime.datetime.utcnow()
+          jd = now.toordinal() + 1721424 + 1
+          print(jd)
+          PY
+          )
+          echo "julian_day=$JD" >> "$GITHUB_OUTPUT"
+          echo "Julian Day Number (JD): $JD"
       - name: Mostrar mensaje de confirmación
         run: echo "El workflow se ejecutó correctamente"
