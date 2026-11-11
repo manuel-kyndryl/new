@@ -1,0 +1,17 @@
+name: Suma del 1 al 4
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sumar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calcular suma
+        shell: bash
+        run: |
+          suma=0
+          for numero in {1..4}; do
+            suma=$((suma + numero))
+          done
+          echo "La suma del 1 al 4 es: $suma"
