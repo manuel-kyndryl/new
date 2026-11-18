@@ -1,4 +1,4 @@
-name: Suma del 1 al 20
+name: Suma del 1 al 30
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
         shell: bash
         run: |
           suma=0
-          for numero in {1..4}; do
+          for numero in {1..10}; do
             suma=$((suma + numero))
           done
           echo "La suma del 1 al 4 es: $suma"
