@@ -1,4 +1,4 @@
-name: Suma del 1 al 4
+name: Suma del 1 al 5
 
 on:
   workflow_dispatch:
