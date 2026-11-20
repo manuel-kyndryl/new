@@ -14,4 +14,4 @@ function diaDeLaSemana(fecha) {
   }).format(fechaUTC);
 }
 
-console.log(diaDeLaSemana("2026-11-07")); // sábado 01
+console.log(diaDeLaSemana("2026-11-07")); // sábado 02
